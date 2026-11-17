@@ -87,14 +87,18 @@ export default function ProjectsGallery() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.25 }}
                 onClick={() => setLightboxIndex(idx)}
-                className="group relative h-[360px] rounded-2xl overflow-hidden border border-plum-border bg-plum cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold flex flex-col justify-end p-6"
+                className="group relative aspect-[3/2] rounded-2xl overflow-hidden border border-plum-border bg-midnight cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold flex flex-col justify-end p-6"
               >
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={
+                    project.category === "neon"
+                      ? "object-contain object-center transition-transform duration-500 group-hover:scale-105"
+                      : "object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  }
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/50 to-transparent opacity-90 group-hover:opacity-75 transition-opacity" />

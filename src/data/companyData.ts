@@ -35,7 +35,7 @@ export const companyData: CompanyConfig = {
   heroSubline: "We design, fabricate, and install custom 3D letters, neon signs, lighting solutions, flex signboards, and event branding from our shop in Dragon Mart 1.",
   address: {
     shop: "Shop BAA-02",
-    building: "Dragon Mart 1",
+    building: "Dragon Mart\u00A01",
     area: "Warsan First, Dubai International City",
     city: "Dubai",
     country: "UAE",

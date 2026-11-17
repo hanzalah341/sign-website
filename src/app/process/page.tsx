@@ -22,7 +22,7 @@ const detailedSteps = [
       "We will advise on suitable lighting styles (front-lit, halo-lit, or neon).",
       "We provide a clear quote with fabrication and installation included."
     ],
-    image: "/images/process-sketch.jpg",
+    image: "/images/process-sketch.webp",
     icon: MessageSquare,
   },
   {
@@ -36,7 +36,7 @@ const detailedSteps = [
       "Technical layout: We confirm mounting points and electrical feed positions.",
       "Material approval: Confirm metal finish, acrylic color, or neon tube tone."
     ],
-    image: "/images/process-design.jpg",
+    image: "/images/process-design.webp",
     icon: Eye,
   },
   {
@@ -50,7 +50,7 @@ const detailedSteps = [
       "LED wiring: Low-voltage, weather-sealed modules are wired and tested.",
       "Quality inspection: Every finished sign is tested in the shop before packing."
     ],
-    image: "/images/process-fabrication.jpg",
+    image: "/images/process-fabrication.webp",
     icon: Hammer,
   },
   {
@@ -64,7 +64,7 @@ const detailedSteps = [
       "Clean wiring routed discreetly to the power unit.",
       "Full illumination test with you before we finish the job."
     ],
-    image: "/images/process-install.jpg",
+    image: "/images/process-install.webp",
     icon: Wrench,
   },
 ];
@@ -128,13 +128,13 @@ export default function ProcessPage() {
 
                 {/* Image Column */}
                 <div className="lg:col-span-5">
-                  <div className="relative aspect-[16/11] rounded-xl overflow-hidden border border-plum-border shadow-lg bg-plum">
+                  <div className="relative aspect-[3/2] rounded-xl overflow-hidden border border-plum-border shadow-lg bg-midnight">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 450px"
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/70 via-transparent to-transparent" />
                     <div className="absolute bottom-3 left-4 text-xs font-sans text-ivory-muted">

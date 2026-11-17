@@ -141,7 +141,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <span>{companyData.address.building}</span>
             <span>•</span>
-            <span>Fabrication & on-site installation</span>
+            <span>Fabrication & installation in Dubai</span>
           </div>
         </div>
       </div>

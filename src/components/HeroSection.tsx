@@ -33,11 +33,11 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         {/* Top bar: Interactive Showroom Switch */}
-        <div className="flex items-center justify-between mb-8 pb-4 border-b border-plum-border/40">
-          <div className="flex items-center gap-3">
-            <span className="w-2 h-2 rounded-full bg-champagne animate-pulse" />
-            <span className="text-[13px] uppercase tracking-[0.2em] text-ivory-dim font-sans font-medium">
-              {companyData.address.building} • Dubai, UAE
+        <div className="flex items-center justify-between mb-8 pb-4 border-b border-plum-border/40 gap-2">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+            <span className="w-2 h-2 rounded-full bg-champagne animate-pulse shrink-0" />
+            <span className="text-xs sm:text-[13px] uppercase tracking-wider sm:tracking-[0.2em] text-ivory-dim font-sans font-medium truncate">
+              Dragon Mart&nbsp;1 • Dubai, UAE
             </span>
           </div>
 
@@ -45,14 +45,14 @@ export default function HeroSection() {
             type="button"
             onClick={toggleLights}
             aria-label="Toggle neon sign power"
-            className={`group inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-[13px] font-sans border transition-all duration-200 ${
+            className={`group inline-flex items-center gap-1.5 sm:gap-2.5 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-[13px] font-sans border transition-all duration-200 shrink-0 ${
               lightsOn
                 ? "border-champagne/40 bg-champagne/10 text-champagne hover:bg-champagne/20"
                 : "border-plum-border bg-plum/60 text-ivory-dim hover:text-ivory"
             }`}
           >
             <Power className={`w-3.5 h-3.5 ${lightsOn ? "text-champagne animate-pulse" : "text-ivory-dim"}`} />
-            <span className="font-medium">
+            <span className="font-medium whitespace-nowrap">
               {lightsOn ? "Lights: ON" : "Lights: OFF"}
             </span>
           </button>
@@ -63,7 +63,7 @@ export default function HeroSection() {
           <div className="absolute top-1/2 left-4 right-4 h-[1px] bg-gradient-to-r from-transparent via-plum-border/60 to-transparent -translate-y-1/2 -z-10" />
 
           <div
-            className={`inline-block font-serif text-6xl sm:text-8xl md:text-9xl lg:text-[10.5rem] font-bold tracking-tight transition-all duration-300 ${
+            className={`inline-block font-serif text-5xl sm:text-8xl md:text-9xl lg:text-[10.5rem] font-bold tracking-tight transition-all duration-300 ${
               lightsOn
                 ? flickered
                   ? "neon-glow-gold"
@@ -74,9 +74,9 @@ export default function HeroSection() {
             LUMEX
           </div>
 
-          <div className="mt-2 flex items-center justify-center gap-4">
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-2 sm:gap-4">
             <span
-              className={`text-[13px] md:text-sm font-sans tracking-[0.4em] uppercase transition-colors duration-300 ${
+              className={`text-xs sm:text-[13px] md:text-sm font-sans tracking-[0.25em] sm:tracking-[0.4em] uppercase transition-colors duration-300 ${
                 lightsOn ? "text-champagne/90" : "text-ivory-dim opacity-40"
               }`}
             >
@@ -84,7 +84,7 @@ export default function HeroSection() {
             </span>
             <span className="text-plum-border">•</span>
             <span
-              className={`text-[13px] md:text-sm font-sans tracking-[0.3em] uppercase transition-colors duration-300 ${
+              className={`text-xs sm:text-[13px] md:text-sm font-sans tracking-[0.2em] sm:tracking-[0.3em] uppercase transition-colors duration-300 ${
                 lightsOn ? "text-coral/90" : "text-ivory-dim opacity-40"
               }`}
             >
@@ -166,7 +166,7 @@ export default function HeroSection() {
             <span className="w-2 h-2 rounded-full bg-champagne mt-2 shrink-0" />
             <div>
               <strong className="text-ivory block font-medium text-base">One team from design to installation</strong>
-              <span className="text-base leading-relaxed">We handle layout proofs, fabrication, and on-site UAE installation.</span>
+              <span className="text-base leading-relaxed">We handle layout proofs, fabrication, and installation in Dubai.</span>
             </div>
           </div>
 

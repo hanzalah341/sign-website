@@ -36,7 +36,7 @@ export default function AboutPage() {
             </h2>
 
             <p>
-              Based at <strong className="text-ivory font-medium">{companyData.address.full}</strong>, we build signage for retail shops, restaurants, commercial spaces, and events across Dubai and the UAE.
+              Based at <strong className="text-ivory font-medium">{companyData.address.full}</strong>, we build signage for retail shops, restaurants, commercial spaces, and events in Dubai.
             </p>
 
             <p>
@@ -86,24 +86,21 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Workshop Showcase Column: ONLY about-workshop.jpg, NO people */}
+          {/* Workshop Showcase Column: ONLY about-workshop.webp, NO people */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-plum-border shadow-xl">
+            <div className="relative aspect-[3/2] sm:aspect-[4/5] rounded-2xl overflow-hidden border border-plum-border shadow-xl bg-midnight">
               <Image
-                src="/images/about-workshop.jpg"
-                alt="Lumex Signage workshop"
+                src="/images/about-workshop.webp"
+                alt="Our Dragon Mart 1 shop"
                 fill
                 sizes="(max-width: 1024px) 100vw, 450px"
-                className="object-cover"
+                className="object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-midnight via-transparent to-transparent opacity-80" />
               <div className="absolute bottom-6 left-6 right-6">
-                <span className="text-xs uppercase tracking-widest text-champagne font-medium block">
-                  {companyData.address.building}
+                <span className="text-sm uppercase tracking-widest text-champagne font-medium block">
+                  Our Dragon Mart 1 shop
                 </span>
-                <p className="font-serif text-xl text-ivory mt-1">
-                  Custom sign fabrication & assembly
-                </p>
               </div>
             </div>
 

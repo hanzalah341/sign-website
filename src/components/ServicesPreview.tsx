@@ -8,7 +8,7 @@ import { ArrowUpRight } from "lucide-react";
 import { servicesData } from "@/data/servicesData";
 
 export default function ServicesPreview() {
-  const [activeServiceIndex, setActiveServiceIndex] = useState<number | null>(0);
+  const [activeServiceIndex, setActiveServiceIndex] = useState<number | null>(1);
 
   return (
     <section className="py-24 border-t border-plum-border relative overflow-hidden">
@@ -91,7 +91,7 @@ export default function ServicesPreview() {
 
           {/* Interactive Floating / Reveal Image on Desktop */}
           <div className="lg:col-span-5 hidden lg:block sticky top-28 self-start">
-            <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-plum-border shadow-xl bg-plum">
+            <div className="relative aspect-[3/2] w-full rounded-2xl overflow-hidden border border-plum-border shadow-xl bg-midnight">
               <AnimatePresence mode="wait">
                 {activeServiceIndex !== null && (
                   <motion.div
@@ -107,18 +107,18 @@ export default function ServicesPreview() {
                       alt={servicesData[activeServiceIndex].title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 500px"
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-midnight via-transparent to-transparent opacity-85" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/30 to-transparent opacity-85" />
 
-                    <div className="absolute bottom-6 left-6 right-6">
-                      <span className="text-[13px] uppercase tracking-widest text-champagne font-medium block">
+                    <div className="absolute bottom-5 left-5 right-5">
+                      <span className="text-[12px] uppercase tracking-widest text-champagne font-medium block">
                         Signage Service
                       </span>
-                      <p className="font-serif text-2xl text-ivory mt-1">
+                      <p className="font-serif text-xl text-ivory mt-0.5">
                         {servicesData[activeServiceIndex].title}
                       </p>
-                      <p className="text-sm text-ivory-muted mt-2 line-clamp-2">
+                      <p className="text-xs text-ivory-muted mt-1 line-clamp-2">
                         {servicesData[activeServiceIndex].fullDesc}
                       </p>
                     </div>

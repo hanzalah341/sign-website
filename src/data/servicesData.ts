@@ -18,7 +18,7 @@ export const servicesData: ServiceItem[] = [
     title: "Custom 3D Letters",
     shortDesc: "Dimensional letters crafted in metal and acrylic, with front, back, or halo illumination options.",
     fullDesc: "We build dimensional letters tailored to your storefront. Whether you need polished metal finishes or clean acrylic faces, each letter is shaped, wired, and assembled with care for weather resistance.",
-    image: "/images/golden-oak-marble-sign.png",
+    image: "/images/warmly-lit-care-clinic-facade.png",
     styles: ["Front-lit acrylic face", "Reverse halo-lit with warm glow", "Dual-lit (front and halo)", "Non-illuminated solid metal"],
     materials: ["Stainless steel finishes", "Polished brass", "Cast acrylic", "Powder-coated aluminum"],
     included: [

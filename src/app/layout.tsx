@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import "./globals.css";
 import { LightsProvider } from "@/context/LightsContext";
@@ -8,6 +8,13 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import CustomCursor from "@/components/CustomCursor";
 import SmoothScroll from "@/components/SmoothScroll";
 import { companyData } from "@/data/companyData";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0E0B1F",
+};
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -49,7 +56,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Lumex Signage Dubai | Custom 3D Letters, Neon Signs & Lighting Solutions",
-    description: "Custom signage in Dragon Mart 1, Dubai. 3D letters, neon signs, lighting solutions, flex signboards, and event branding with on-site installation across UAE.",
+    description: "Custom signage in Dragon Mart 1, Dubai. 3D letters, neon signs, lighting solutions, flex signboards, and event branding with installation in Dubai.",
     url: "https://lumexsignage.ae",
     siteName: "Lumex Signage",
     locale: "en_AE",
@@ -126,7 +133,7 @@ export default function RootLayout({
           <SmoothScroll>
             <CustomCursor />
             <Navbar />
-            <main className="min-h-screen pt-20">
+            <main className="min-h-screen pt-20 overflow-x-hidden w-full max-w-full">
               {children}
             </main>
             <Footer />

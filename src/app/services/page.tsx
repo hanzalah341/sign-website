@@ -61,13 +61,13 @@ export default function ServicesPage() {
                     isEven ? "lg:order-1" : "lg:order-2"
                   }`}
                 >
-                  <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-plum-border shadow-xl bg-plum group">
+                  <div className="relative aspect-[3/2] rounded-2xl overflow-hidden border border-plum-border shadow-xl bg-midnight group">
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 500px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 via-transparent to-transparent" />
                     

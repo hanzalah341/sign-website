@@ -11,7 +11,7 @@ export default function CtaBand() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <span className="inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.25em] text-champagne font-sans font-medium mb-4">
           <span className="w-2 h-2 rounded-full bg-champagne animate-pulse" />
-          {companyData.address.building} • On-Site Installation Across UAE
+          {companyData.address.building} • Installation in Dubai
         </span>
 
         <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl text-ivory tracking-tight leading-tight">

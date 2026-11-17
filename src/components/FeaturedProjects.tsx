@@ -47,14 +47,14 @@ export default function FeaturedProjects() {
           {/* Card 1 - Large Wide */}
           <div
             onClick={() => setLightboxIndex(0)}
-            className="group relative md:col-span-8 h-[380px] md:h-[460px] rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold"
+            className="group relative md:col-span-8 aspect-[3/2] md:aspect-[16/10] rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold bg-midnight"
           >
             <Image
               src={featured[0].image}
               alt={featured[0].title}
               fill
               sizes="(max-width: 768px) 100vw, 66vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent opacity-85 group-hover:opacity-75 transition-opacity" />
 
@@ -75,17 +75,17 @@ export default function FeaturedProjects() {
             </div>
           </div>
 
-          {/* Card 2 - Tall Vertical */}
+          {/* Card 2 - Hello Neon: object-contain with dark background so letters are never cut off */}
           <div
             onClick={() => setLightboxIndex(1)}
-            className="group relative md:col-span-4 h-[380px] md:h-[460px] rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold"
+            className="group relative md:col-span-4 aspect-[3/2] md:aspect-auto md:h-full rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold bg-midnight"
           >
             <Image
               src={featured[1].image}
               alt={featured[1].title}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-contain object-center transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent opacity-85 group-hover:opacity-75 transition-opacity" />
 
@@ -109,14 +109,14 @@ export default function FeaturedProjects() {
           {/* Card 3 */}
           <div
             onClick={() => setLightboxIndex(2)}
-            className="group relative md:col-span-4 h-[340px] rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold"
+            className="group relative md:col-span-4 aspect-[3/2] rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold bg-midnight"
           >
             <Image
               src={featured[2].image}
               alt={featured[2].title}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent opacity-85 group-hover:opacity-75 transition-opacity" />
 
@@ -134,14 +134,14 @@ export default function FeaturedProjects() {
           {/* Card 4 */}
           <div
             onClick={() => setLightboxIndex(3)}
-            className="group relative md:col-span-4 h-[340px] rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold"
+            className="group relative md:col-span-4 aspect-[3/2] rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold bg-midnight"
           >
             <Image
               src={featured[3].image}
               alt={featured[3].title}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent opacity-85 group-hover:opacity-75 transition-opacity" />
 
@@ -159,14 +159,14 @@ export default function FeaturedProjects() {
           {/* Card 5 */}
           <div
             onClick={() => setLightboxIndex(4)}
-            className="group relative md:col-span-4 h-[340px] rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold"
+            className="group relative md:col-span-4 aspect-[3/2] rounded-2xl overflow-hidden border border-plum-border cursor-pointer transition-all duration-300 hover:border-champagne/60 hover:shadow-glow-gold bg-midnight"
           >
             <Image
               src={featured[4].image}
               alt={featured[4].title}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent opacity-85 group-hover:opacity-75 transition-opacity" />
 
