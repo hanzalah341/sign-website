@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-midnight: #0E0B1F;
+  --color-plum: #1A1535;
+  --color-plum-deep: #120E26;
+  --color-champagne: #E8C27A;
+  --color-coral: #FF4D7D;
+  --color-ivory: #F5F0E6;
+  --color-ivory-muted: #B8B1A2;
+  --color-border: #292152;
+  
+  --bg-current: var(--color-midnight);
+  --text-current: var(--color-ivory);
+}
+
+body.lights-off {
+  --bg-current: #070510;
+  --color-midnight: #070510;
+  --color-plum: #100C22;
+}
+
+html {
+  background-color: var(--color-midnight);
+  color: var(--color-ivory);
+}
+
+body {
+  background-color: var(--bg-current);
+  color: var(--text-current);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar - lightweight */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0E0B1F;
+}
+::-webkit-scrollbar-thumb {
+  background: #28214D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8C27A;
+}
+
+/* Selection */
+::selection {
+  background: rgba(232, 194, 122, 0.3);
+  color: #F5F0E6;
+}
+
+/* Accessible focus ring */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #E8C27A;
+  outline-offset: 3px;
+}
+
+/* High-contrast serif headings */
+h1, h2, h3, .font-serif {
+  letter-spacing: -0.02em;
+}
+
+/* Optimized, lightweight Neon glow - avoids laggy multi-pass drop-shadow filters */
+.neon-glow-gold {
+  color: #FFF5DC;
+  text-shadow: 
+    0 0 8px rgba(232, 194, 122, 0.9),
+    0 0 25px rgba(232, 194, 122, 0.45);
+}
+
+.neon-glow-coral {
+  color: #FFEAF0;
+  text-shadow: 
+    0 0 8px rgba(255, 77, 125, 0.9),
+    0 0 25px rgba(255, 77, 125, 0.45);
+}
+
+.neon-off {
+  color: #383059 !important;
+  text-shadow: none !important;
+  opacity: 0.45;
+  transition: all 0.3s ease-out;
+}
+
+/* Initial strike flicker - uses opacity only (GPU accelerated) */
+@keyframes tubeStrike {
+  0% { opacity: 0.2; }
+  10% { opacity: 0.9; }
+  20% { opacity: 0.3; }
+  35% { opacity: 1; }
+  50% { opacity: 0.4; }
+  65% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.animate-tube-strike {
+  animation: tubeStrike 0.8s ease-out 1 forwards;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
