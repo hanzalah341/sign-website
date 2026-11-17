@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
 import "./globals.css";
 import { LightsProvider } from "@/context/LightsContext";
 import Navbar from "@/components/Navbar";
@@ -15,20 +14,6 @@ export const viewport: Viewport = {
   maximumScale: 5,
   themeColor: "#0E0B1F",
 };
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-serif",
-  display: "swap",
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -121,14 +106,12 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${cormorant.variable} ${outfit.variable}`} suppressHydrationWarning>
-      <head>
+    <html lang="en" suppressHydrationWarning>
+      <body className="font-sans bg-midnight text-ivory antialiased selection:bg-champagne/30 selection:text-ivory" suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="font-sans bg-midnight text-ivory antialiased selection:bg-champagne/30 selection:text-ivory">
         <LightsProvider>
           <SmoothScroll>
             <CustomCursor />

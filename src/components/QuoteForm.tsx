@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, MessageCircle, Send, Upload, AlertCircle } from "lucide-react";
 import { companyData } from "@/data/companyData";
@@ -29,8 +28,6 @@ const budgetOptions = [
 ];
 
 export default function QuoteForm() {
-  const searchParams = useSearchParams();
-  const preselectedService = searchParams.get("service") || "";
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -49,15 +46,19 @@ export default function QuoteForm() {
   const [generatedWhatsAppUrl, setGeneratedWhatsAppUrl] = useState("");
 
   useEffect(() => {
-    if (preselectedService) {
-      const match = servicesData.find(
-        (s) => s.slug === preselectedService || s.id === preselectedService
-      );
-      if (match) {
-        setFormData((prev) => ({ ...prev, service: match.title }));
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const serviceParam = params.get("service") || "";
+      if (serviceParam) {
+        const match = servicesData.find(
+          (s) => s.slug === serviceParam || s.id === serviceParam
+        );
+        if (match) {
+          setFormData((prev) => ({ ...prev, service: match.title }));
+        }
       }
     }
-  }, [preselectedService]);
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>

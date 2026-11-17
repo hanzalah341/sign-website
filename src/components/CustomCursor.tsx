@@ -37,33 +37,37 @@ export default function CustomCursor() {
       const onMouseOver = (e: MouseEvent) => {
         const target = e.target;
         if (!target || !(target instanceof Element)) return;
-        if (
-          target.matches("a, button, input, textarea, select, [data-cursor-interactive]") ||
-          (typeof target.closest === "function" && target.closest("a, button"))
-        ) {
-          isHovered = true;
-          if (cursorRingRef.current) {
-            cursorRingRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%) scale(1.6)`;
-            cursorRingRef.current.style.borderColor = "rgba(232, 194, 122, 0.7)";
-            cursorRingRef.current.style.backgroundColor = "rgba(232, 194, 122, 0.1)";
+        try {
+          if (
+            target.matches?.("a, button, input, textarea, select, [data-cursor-interactive]") ||
+            (typeof target.closest === "function" && target.closest("a, button"))
+          ) {
+            isHovered = true;
+            if (cursorRingRef.current) {
+              cursorRingRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%) scale(1.6)`;
+              cursorRingRef.current.style.borderColor = "rgba(232, 194, 122, 0.7)";
+              cursorRingRef.current.style.backgroundColor = "rgba(232, 194, 122, 0.1)";
+            }
           }
-        }
+        } catch {}
       };
 
       const onMouseOut = (e: MouseEvent) => {
         const target = e.target;
         if (!target || !(target instanceof Element)) return;
-        if (
-          target.matches("a, button, input, textarea, select, [data-cursor-interactive]") ||
-          (typeof target.closest === "function" && target.closest("a, button"))
-        ) {
-          isHovered = false;
-          if (cursorRingRef.current) {
-            cursorRingRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%) scale(1)`;
-            cursorRingRef.current.style.borderColor = "rgba(232, 194, 122, 0.35)";
-            cursorRingRef.current.style.backgroundColor = "transparent";
+        try {
+          if (
+            target.matches?.("a, button, input, textarea, select, [data-cursor-interactive]") ||
+            (typeof target.closest === "function" && target.closest("a, button"))
+          ) {
+            isHovered = false;
+            if (cursorRingRef.current) {
+              cursorRingRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%) scale(1)`;
+              cursorRingRef.current.style.borderColor = "rgba(232, 194, 122, 0.35)";
+              cursorRingRef.current.style.backgroundColor = "transparent";
+            }
           }
-        }
+        } catch {}
       };
 
       const onMouseLeave = () => {

@@ -94,11 +94,7 @@ export default function Navbar() {
                   >
                     {link.label}
                     {isActive && (
-                      <motion.div
-                        layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-champagne rounded-full shadow-[0_0_8px_#E8C27A]"
-                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                      />
+                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-champagne rounded-full shadow-[0_0_8px_#E8C27A]" />
                     )}
                   </Link>
                 );

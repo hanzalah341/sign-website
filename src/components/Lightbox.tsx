@@ -67,23 +67,22 @@ export default function Lightbox({
     setTouchStartX(null);
   };
 
-  if (!isOpen || !currentItem) return null;
-
   return (
     <AnimatePresence>
-      <motion.div
-        ref={containerRef}
-        role="dialog"
-        aria-modal="true"
-        aria-label={currentItem.title}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.2 }}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-midnight/95 backdrop-blur-md p-4 md:p-8"
-      >
+      {isOpen && currentItem && (
+        <motion.div
+          ref={containerRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label={currentItem.title}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-midnight/95 backdrop-blur-md p-4 md:p-8"
+        >
         {/* Top Controls */}
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-20">
           <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-champagne bg-plum-deep/80 px-3 py-1.5 rounded-full border border-plum-border">
@@ -154,6 +153,7 @@ export default function Lightbox({
           </div>
         </div>
       </motion.div>
+      )}
     </AnimatePresence>
   );
 }

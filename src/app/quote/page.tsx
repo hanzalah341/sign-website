@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import type { Metadata } from "next";
 import { MessageCircle, Phone, MapPin, Check } from "lucide-react";
 import QuoteForm from "@/components/QuoteForm";
@@ -29,9 +29,7 @@ export default function QuotePage() {
         {/* Layout: Form on Left, Workshop Direct Info on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-8">
-            <Suspense fallback={<div className="p-12 text-center text-ivory-muted">Loading form...</div>}>
-              <QuoteForm />
-            </Suspense>
+            <QuoteForm />
           </div>
 
           {/* Right Column */}
